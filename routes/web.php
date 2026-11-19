@@ -18,6 +18,11 @@ Route::get('/events/register', [EventController::class, 'create'])->name('events
 
 
 
+// مسار استقبال بيانات الفورم (POST)
+Route::post('/events/register', [EventController::class, 'store'])->name('events.store');
+
+// مسار عرض تفاصيل فعالية محددة 
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
 
 // Ahmed’s workspace
 // 3. مسارات الصفحات الثابتة
